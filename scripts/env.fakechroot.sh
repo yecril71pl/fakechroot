@@ -128,7 +128,7 @@ else
         esac
     done
 
-    fakechroot_env_cmd=`PATH=$fakechroot_env_path command -v $1 2>/dev/null`
+    fakechroot_env_cmd=`PATH=$fakechroot_env_path command -v sh $1 2>/dev/null`
     fakechroot_env_cmd=${fakechroot_env_cmd:-$1}
     shift
 
