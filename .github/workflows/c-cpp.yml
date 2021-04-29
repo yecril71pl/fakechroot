@@ -29,4 +29,9 @@ jobs:
       uses: actions/upload-artifact@v2.2.3
       with:
         name: test-log
-        path: fakechroot-2.20.2/_build/sub/test/test-suite.log fakechroot-2.20.2.tar.gz
+        path: fakechroot-2.20.2/_build/sub/test/test-suite.log
+    - name: distribute
+      uses: actions/upload-artifact@v2.2.3
+      with:
+        name: distribution
+        path: fakechroot-2.20.2.tar.gz
