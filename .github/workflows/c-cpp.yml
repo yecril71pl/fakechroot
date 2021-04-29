@@ -22,13 +22,19 @@ jobs:
       run: make
     - name: make check
       run: make check
+      continue-on-error: true
+    - name: upload test log
+      uses: actions/upload-artifact@v2.2.3
+      with:
+        name: test-log
+        path: test/test-suite.log
     - name: make distcheck
       run: make distcheck V=1
       continue-on-error: true
     - name: upload test log
       uses: actions/upload-artifact@v2.2.3
       with:
-        name: test-log
+        name: dist-test-log
         path: fakechroot-2.20.2/_build/sub/test/test-suite.log
     - name: distribute
       uses: actions/upload-artifact@v2.2.3
