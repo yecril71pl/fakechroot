@@ -23,8 +23,7 @@ jobs:
     - name: make check
       run: make check
     - name: make distcheck
-      run: make distcheck
-      continue-on-error: true
+      run: make distcheck V=1
     - name: upload test log
       uses: actions/upload-artifact@v2.2.3
       with:
