@@ -24,5 +24,5 @@ done
 
 FAKECHROOT_CMD_SUBST="`echo $cmd_subst | tr ' ' ':'`${FAKECHROOT_CMD_SUBST:+:$FAKECHROOT_CMD_SUBST}"
 
-sh "$abs_top_srcdir/scripts/env.fakechroot.sh" - FAKECHROOT_CMD_SUBST="$FAKECHROOT_CMD_SUBST" HOME="$HOME" PATH="$PATH" SHELL="$SHELL" "$abs_top_srcdir/scripts/fakechroot" -c "$abs_top_srcdir/scripts" -l "$abs_top_srcdir/src/.libs/libfakechroot.so" "$@"
+sh "$abs_top_srcdir/scripts/env.fakechroot.sh" - FAKECHROOT_CMD_SUBST="$FAKECHROOT_CMD_SUBST" HOME="$HOME" PATH="$PATH" SHELL="$SHELL" "$abs_top_srcdir/scripts/fakechroot.sh" -c "$abs_top_srcdir/scripts" -l "$abs_top_srcdir/src/.libs/libfakechroot.so" "$@"
 exit $?
