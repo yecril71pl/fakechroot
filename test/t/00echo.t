@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -x
 
 # all paths need to be relative to $srcdir variable
 srcdir=${srcdir:-.}
