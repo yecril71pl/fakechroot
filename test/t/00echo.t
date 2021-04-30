@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 
 # all paths need to be relative to $srcdir variable
 srcdir=${srcdir:-.}
@@ -27,7 +27,7 @@ for chroot in chroot fakechroot; do
     else
 
         # echo something
-        t=`$srcdir/$chroot.sh $testtree $echo something 2>&1`
+        t=`sh -x $srcdir/$chroot.sh $testtree $echo something`
         # check if it is ok or print "not"
         test "$t" = "something" || not
         # print "ok" message with unquoted test output
