@@ -3,5 +3,5 @@
 srcdir=${srcdir:-.}
 FAKECHROOT="${FAKECHROOT:-$srcdir/bin/fakechroot}"
 
-"$FAKECHROOT" "$srcdir/chroot.sh" "$@"
+sh -x "$FAKECHROOT" "$srcdir/chroot.sh" "$@"
 exit $?
